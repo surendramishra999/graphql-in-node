@@ -1,0 +1,26 @@
+mutation addNewName($input: NameInput!) {
+  AddName(input: $input) {
+    label
+    createdAt
+    createdBy {
+      lastName
+      firstName
+    }
+    description
+    totalVotesCount {
+      up
+      down
+    }
+  }
+}
+
+
+{
+  "input": {
+    "apiKey": "4242",
+    "contestId": 2,
+    "label": "test hann 32",
+    "description": "this is test desc"
+    
+  }
+}

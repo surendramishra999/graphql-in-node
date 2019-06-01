@@ -1,0 +1,40 @@
+query unionTest($input:String!){
+  
+  user(key:$input){
+    id
+    email
+    firstName
+    lastName
+    activities{
+      ... on Contest{
+        header:title
+      }
+      ... on Name{
+        header:label
+      }
+    }
+  }
+}
+
+{
+  "input": "4242"
+}
+
+
+
+query userQuery($input: String!) {
+  user(key: $input) {
+    id
+    email
+    firstName
+    lastName
+    activities {
+      ... on Contest {
+        title
+      }
+      ... on Name {
+        label
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  user(key: "4242") {
+    id
+    email
+    firstName
+    lastName
+    createdAt
+    contests {
+      id
+      code
+      title
+      description
+      createdAt
+      status
+      name {
+        id
+        label
+        createdAt
+        description
+        totalVotesCount{
+          up
+          down
+        }
+        createdBy {
+          id
+          firstName
+          lastName
+          email
+          createdAt
+          createdAt
+          contestsCount
+          namesCount
+          votesCount
+          createdAt
+        }
+      }
+    }
+    contestsCount
+    namesCount
+    votesCount
+    
+    
+  }
+}
